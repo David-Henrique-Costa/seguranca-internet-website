@@ -88,10 +88,10 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-30 bg-white/90 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <Shield className="w-8 h-8 text-blue-600" />
           <h1 className="text-xl font-bold text-gray-800">SecureNet</h1>
-        </div>
+        </Link>
         
         <nav className="hidden md:flex space-x-6">
           <Link to="/" className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">
@@ -222,7 +222,7 @@ const HomePage = () => {
       <Header />
 
       {/* Área principal com botões flutuantes */}
-      <main className="relative z-20 min-h-screen flex items-center justify-center pt-20 pb-20 px-4">
+      <main className="relative z-20 floating-buttons-container">
         <div className="relative w-full max-w-6xl mx-auto">
           {/* Layout responsivo para mobile */}
           <div className="block sm:hidden space-y-6">

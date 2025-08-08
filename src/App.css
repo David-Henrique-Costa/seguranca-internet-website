@@ -121,6 +121,15 @@
 
 
 /* Estilos customizados para o website de segurança */
+.floating-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
 
 .floating-button {
   transform-style: preserve-3d;
@@ -209,9 +218,15 @@
 
 /* Responsividade aprimorada para telas menores */
 @media (max-width: 640px) {
+  .floating-buttons-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  
   .floating-button {
-    position: relative;
-    transform: none;
+    position: relative !important;
+    transform: none !important;
     margin: 1rem auto;
     display: block;
   }

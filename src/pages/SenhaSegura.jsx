@@ -36,10 +36,10 @@ const SenhaSegura = () => {
       <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <Shield className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold text-white">SecureNet</span>
-            </div>
+            </Link>
             <div className="hidden md:flex space-x-6">
               <Link to="/" className="text-white hover:text-blue-300 transition-colors">
                 Início
