@@ -241,21 +241,44 @@ const HomePage = () => {
           ))}
         </div>
         
-        {/* Layout desktop com posicionamento absoluto */}
-        <div className="hidden sm:block relative w-full max-w-4xl h-96">
-          {buttons.map((button) => (
+        {/* Layout desktop com posicionamento específico */}
+        <div className="hidden sm:block desktop-buttons-container">
+          <div className="button-left">
             <FloatingButton
-              key={button.id}
-              icon={button.icon}
-              title={button.title}
-              description={button.description}
-              detailedDescription={button.detailedDescription}
-              position={button.position}
-              isExpanded={expandedButton === button.id}
-              onToggle={() => handleButtonToggle(button.id)}
-              linkTo={button.linkTo}
+              icon={buttons[0].icon}
+              title={buttons[0].title}
+              description={buttons[0].description}
+              detailedDescription={buttons[0].detailedDescription}
+              position="absolute"
+              isExpanded={expandedButton === buttons[0].id}
+              onToggle={() => handleButtonToggle(buttons[0].id)}
+              linkTo={buttons[0].linkTo}
             />
-          ))}
+          </div>
+          <div className="button-center">
+            <FloatingButton
+              icon={buttons[1].icon}
+              title={buttons[1].title}
+              description={buttons[1].description}
+              detailedDescription={buttons[1].detailedDescription}
+              position="absolute"
+              isExpanded={expandedButton === buttons[1].id}
+              onToggle={() => handleButtonToggle(buttons[1].id)}
+              linkTo={buttons[1].linkTo}
+            />
+          </div>
+          <div className="button-right">
+            <FloatingButton
+              icon={buttons[2].icon}
+              title={buttons[2].title}
+              description={buttons[2].description}
+              detailedDescription={buttons[2].detailedDescription}
+              position="absolute"
+              isExpanded={expandedButton === buttons[2].id}
+              onToggle={() => handleButtonToggle(buttons[2].id)}
+              linkTo={buttons[2].linkTo}
+            />
+          </div>
         </div>
       </main>
 
