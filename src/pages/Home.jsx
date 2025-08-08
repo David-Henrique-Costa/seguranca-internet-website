@@ -195,25 +195,25 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Background com múltiplas imagens */}
-      <div className="absolute inset-0 z-0 parallax-bg">
-        <div className="absolute inset-0 animated-gradient z-10"></div>
-        <div className="grid grid-cols-2 grid-rows-2 h-full">
+    <div className="min-h-screen bg-gray-100 relative overflow-hidden">
+      {/* Fundo com imagens em grid */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 animated-gradient z-10 opacity-80"></div>
+        <div className="grid grid-cols-2 grid-rows-2 h-full w-full">
           <div 
-            className="bg-cover bg-center opacity-30"
+            className="bg-cover bg-center opacity-40"
             style={{ backgroundImage: `url(${bgImage1})` }}
           ></div>
           <div 
-            className="bg-cover bg-center opacity-30"
+            className="bg-cover bg-center opacity-40"
             style={{ backgroundImage: `url(${bgImage2})` }}
           ></div>
           <div 
-            className="bg-cover bg-center opacity-30"
+            className="bg-cover bg-center opacity-40"
             style={{ backgroundImage: `url(${bgImage3})` }}
           ></div>
           <div 
-            className="bg-cover bg-center opacity-30"
+            className="bg-cover bg-center opacity-40"
             style={{ backgroundImage: `url(${bgImage4})` }}
           ></div>
         </div>
@@ -222,42 +222,40 @@ const HomePage = () => {
       <Header />
 
       {/* Área principal com botões flutuantes */}
-      <main className="relative z-20 floating-buttons-container">
-        <div className="relative w-full max-w-6xl mx-auto">
-          {/* Layout responsivo para mobile */}
-          <div className="block sm:hidden space-y-6">
-            {buttons.map((button) => (
-              <div key={button.id} className="flex justify-center">
-                <FloatingButton
-                  icon={button.icon}
-                  title={button.title}
-                  description={button.description}
-                  detailedDescription={button.detailedDescription}
-                  position="relative"
-                  isExpanded={expandedButton === button.id}
-                  onToggle={() => handleButtonToggle(button.id)}
-                  linkTo={button.linkTo}
-                />
-              </div>
-            ))}
-          </div>
-          
-          {/* Layout desktop com posicionamento absoluto */}
-          <div className="hidden sm:block relative h-96">
-            {buttons.map((button) => (
+      <main className="floating-buttons-container">
+        {/* Layout responsivo para mobile */}
+        <div className="block sm:hidden w-full space-y-6">
+          {buttons.map((button) => (
+            <div key={button.id} className="flex justify-center">
               <FloatingButton
-                key={button.id}
                 icon={button.icon}
                 title={button.title}
                 description={button.description}
                 detailedDescription={button.detailedDescription}
-                position={button.position}
+                position="relative"
                 isExpanded={expandedButton === button.id}
                 onToggle={() => handleButtonToggle(button.id)}
                 linkTo={button.linkTo}
               />
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Layout desktop com posicionamento absoluto */}
+        <div className="hidden sm:block relative w-full max-w-4xl h-96">
+          {buttons.map((button) => (
+            <FloatingButton
+              key={button.id}
+              icon={button.icon}
+              title={button.title}
+              description={button.description}
+              detailedDescription={button.detailedDescription}
+              position={button.position}
+              isExpanded={expandedButton === button.id}
+              onToggle={() => handleButtonToggle(button.id)}
+              linkTo={button.linkTo}
+            />
+          ))}
         </div>
       </main>
 
