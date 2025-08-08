@@ -222,7 +222,7 @@ const HomePage = () => {
       <Header />
 
       {/* Área principal com botões flutuantes */}
-      <main className="relative z-20 floating-buttons-container">
+      <main className="relative z-20 min-h-screen flex items-center justify-center pt-20 pb-20 px-4">
         <div className="relative w-full max-w-6xl mx-auto">
           {/* Layout responsivo para mobile */}
           <div className="block sm:hidden space-y-6">

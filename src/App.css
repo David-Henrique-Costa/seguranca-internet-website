@@ -121,15 +121,6 @@
 
 
 /* Estilos customizados para o website de segurança */
-.floating-buttons-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 120px); /* Usar min-height para permitir que o conteúdo se expanda */
-  gap: 2rem; /* Espaçamento entre os botões */
-  flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
-  padding: 1rem; /* Adicionar padding geral para evitar que os botões colem nas bordas */
-}
 
 .floating-button {
   transform-style: preserve-3d;
@@ -218,15 +209,9 @@
 
 /* Responsividade aprimorada para telas menores */
 @media (max-width: 640px) {
-  .floating-buttons-container {
-    flex-direction: column;
-    height: auto; /* Remover altura fixa para mobile */
-    padding: 1rem;
-  }
-  
   .floating-button {
-    position: relative; /* Remover !important */
-    transform: none; /* Remover !important */
+    position: relative;
+    transform: none;
     margin: 1rem auto;
     display: block;
   }
