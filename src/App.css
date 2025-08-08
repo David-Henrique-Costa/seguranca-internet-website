@@ -121,8 +121,14 @@
 
 
 /* Estilos customizados para o website de segurança */
-.floating-button-container {
-  perspective: 1000px;
+.floating-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* Usar min-height para permitir que o conteúdo se expanda */
+  gap: 2rem; /* Espaçamento entre os botões */
+  flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
+  padding: 1rem; /* Adicionar padding geral para evitar que os botões colem nas bordas */
 }
 
 .floating-button {
@@ -154,71 +160,17 @@
   }
 }
 
-/* Gradiente animado para o fundo */
-.animated-gradient {
-  background: linear-gradient(-45deg, #1e3a8a, #3730a3, #7c3aed, #1e40af);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Efeito de brilho nos botões */
-.glow-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.glow-effect::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transform: rotate(45deg);
-  transition: all 0.5s;
-  opacity: 0;
-}
-
-.glow-effect:hover::before {
-  animation: shine 0.8s ease-in-out;
-}
-
-@keyframes shine {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-    opacity: 0;
-  }
-}
-
-/* Responsividade aprimorada */
+/* Responsividade aprimorada para telas menores */
 @media (max-width: 640px) {
   .floating-buttons-container {
+    flex-direction: column;
+    height: auto; /* Remover altura fixa para mobile */
     padding: 1rem;
   }
   
   .floating-button {
-    position: relative !important;
-    transform: none !important;
+    position: relative; /* Remover !important */
+    transform: none; /* Remover !important */
     margin: 1rem auto;
     display: block;
   }
@@ -227,35 +179,3 @@
     margin: 2rem auto;
   }
 }
-
-/* Efeito parallax suave */
-.parallax-bg {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Melhorias de acessibilidade */
-@media (prefers-reduced-motion: reduce) {
-  .floating-button,
-  .animated-gradient,
-  .glow-effect::before {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* Estilo para foco de teclado */
-.floating-button:focus {
-  outline: 2px solid #60a5fa;
-  outline-offset: 4px;
-}
-
-/* Sombras mais suaves */
-.soft-shadow {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.soft-shadow-lg {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
