@@ -162,15 +162,6 @@ const HomePage = () => {
 
   const buttons = [
     {
-      id: 'security',
-      icon: Shield,
-      title: 'Segurança na Internet',
-      description: 'Proteja-se online',
-      detailedDescription: 'A segurança na internet é fundamental nos dias atuais. Envolve práticas e tecnologias para proteger dados pessoais, evitar fraudes, malware e ataques cibernéticos. Inclui o uso de senhas seguras, autenticação em duas etapas, navegação consciente e manter softwares atualizados.',
-      position: 'top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
-      linkTo: null // Botão central não tem link
-    },
-    {
       id: 'password',
       icon: Lock,
       title: 'Senhas Seguras',
@@ -178,6 +169,15 @@ const HomePage = () => {
       detailedDescription: 'Uma senha segura deve ter pelo menos 12 caracteres, combinando letras maiúsculas e minúsculas, números e símbolos. Evite informações pessoais, use senhas únicas para cada conta e considere um gerenciador de senhas. Ative a autenticação em duas etapas sempre que possível.',
       position: 'top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2',
       linkTo: '/senha-segura'
+    },
+    {
+      id: 'security',
+      icon: Shield,
+      title: 'Segurança na Internet',
+      description: 'Proteja-se online',
+      detailedDescription: 'A segurança na internet é fundamental nos dias atuais. Envolve práticas e tecnologias para proteger dados pessoais, evitar fraudes, malware e ataques cibernéticos. Inclui o uso de senhas seguras, autenticação em duas etapas, navegação consciente e manter softwares atualizados.',
+      position: 'top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2',
+      linkTo: null // Botão central não tem link
     },
     {
       id: 'browsing',
