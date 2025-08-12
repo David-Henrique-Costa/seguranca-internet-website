@@ -130,7 +130,7 @@ const Sobre = () => {
   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
     {/* Substitua o div pelo img abaixo */}
     <img
-      src="/caminho/para/imagem1.jpg"
+      src="https://raw.githubusercontent.com/David-Henrique-Costa/seguranca-internet-website/refs/heads/master/src/assets/1000606704.jpg"
       alt="Lucas Fernandes"
       className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
     />
@@ -140,7 +140,7 @@ const Sobre = () => {
   </div>
   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
     <img
-      src="/caminho/para/imagem2.jpg"
+      src="https://raw.githubusercontent.com/David-Henrique-Costa/seguranca-internet-website/refs/heads/master/src/assets/1663075671014.jpeg"
       alt="David Henrique"
       className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
     />
@@ -150,7 +150,7 @@ const Sobre = () => {
   </div>
   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
     <img
-      src="/caminho/para/imagem3.jpg"
+      src="https://raw.githubusercontent.com/David-Henrique-Costa/seguranca-internet-website/refs/heads/master/src/assets/1000606705.jpg"
       alt="Breno Silva"
       className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
     />
