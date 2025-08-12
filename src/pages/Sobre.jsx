@@ -126,37 +126,41 @@ const Sobre = () => {
           </div>
 
           {/* Team */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Nossa Equipe</h2>
-            <p className="text-blue-200 max-w-2xl mx-auto mb-8">
-              Contamos com uma equipe multidisciplinar de especialistas em segurança da informação, 
-              desenvolvedores e educadores, todos comprometidos em oferecer o melhor conteúdo e 
-              serviços de segurança digital.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4"></div>
-                <h3 className="text-lg font-semibold text-white mb-2">Dr. Ana Silva</h3>
-                <p className="text-blue-300 text-sm mb-2">CEO & Especialista em Segurança</p>
-                <p className="text-blue-200 text-sm">PhD em Segurança da Informação com 15 anos de experiência.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-blue-500 rounded-full mx-auto mb-4"></div>
-                <h3 className="text-lg font-semibold text-white mb-2">Carlos Santos</h3>
-                <p className="text-blue-300 text-sm mb-2">CTO & Arquiteto de Segurança</p>
-                <p className="text-blue-200 text-sm">Especialista em infraestrutura segura e resposta a incidentes.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mx-auto mb-4"></div>
-                <h3 className="text-lg font-semibold text-white mb-2">Maria Oliveira</h3>
-                <p className="text-blue-300 text-sm mb-2">Diretora de Educação</p>
-                <p className="text-blue-200 text-sm">Responsável por desenvolver conteúdos educativos e treinamentos.</p>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8">
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+    {/* Substitua o div pelo img abaixo */}
+    <img
+      src="/caminho/para/imagem1.jpg"
+      alt="Lucas Fernandes"
+      className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+    />
+    <h3 className="text-lg font-semibold text-white mb-2">Lucas Fernandes</h3>
+    <p className=" text-blue-300 text-sm mb-2">Aluno noite A</p>
+    <p className="text-blue-200 text-sm">Revisor da Webpage.</p>
+  </div>
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+    <img
+      src="/caminho/para/imagem2.jpg"
+      alt="David Henrique"
+      className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+    />
+    <h3 className="text-lg font-semibold text-white mb-2">David Henrique</h3>
+    <p className="text-blue-300 text-sm mb-2">Aluno Noite A</p>
+    <p className="text-blue-200 text-sm">Desenvolvedor da Webpage.</p>
+  </div>
+  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+    <img
+      src="/caminho/para/imagem3.jpg"
+      alt="Breno Silva"
+      className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
+    />
+    <h3 className="text-lg font-semibold text-white mb-2">Breno Silva</h3>
+    <p className="text-blue-300 text-sm mb-2">Aluno noite A</p>
+    <p className="text-blue-200 text-sm">Assistente de Solução de Erros.</p>
+  </div>
           </div>
         </div>
       </main>
-
       {/* Footer */}
       <footer className="bg-black/30 backdrop-blur-sm border-t border-white/10 mt-16">
         <div className="container mx-auto px-4 py-8">
@@ -171,4 +175,3 @@ const Sobre = () => {
 };
 
 export default Sobre;
-
