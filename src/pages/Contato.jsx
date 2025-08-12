@@ -184,7 +184,7 @@ const Contato = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-blue-300" />
-                    <span className="text-blue-200">(11) 3000-0000</span>
+                    <span className="text-blue-200">(31) 98765-4321</span>
                   </div>
                 </div>
               </div>
@@ -193,7 +193,7 @@ const Contato = () => {
                 <h3 className="text-xl font-bold text-white mb-4">Horário de Atendimento</h3>
                 <div className="space-y-2 text-blue-200">
                   <p>Segunda a Sexta: 8h às 18h</p>
-                  <p>Sábado: 9h às 14h</p>
+                  <p>Sábado: 8h às 12h</p>
                   <p>Domingo: Fechado</p>
                 </div>
               </div>
